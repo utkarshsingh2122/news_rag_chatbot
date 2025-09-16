@@ -1,0 +1,77 @@
+:root { --bg:#0b0c10; --panel:#12141a; --text:#e8e8e8; --muted:#a0a0a0; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, sans-serif; }
+.chat { max-width: 900px; margin:0 auto; min-height:100vh; display:flex; flex-direction:column; }
+header { display:flex; justify-content:space-between; align-items:center; padding:16px; background:var(--panel); position:sticky; top:0; }
+main { flex:1; padding: 16px; display:flex; flex-direction:column; gap:12px; }
+.msg { display:flex; }
+.msg.user { justify-content:flex-end; }
+.bubble { background:#1e2330; padding:12px 14px; border-radius:12px; white-space:pre-wrap; }
+.msg.user .bubble { background:#283347; }
+footer { display:flex; gap:8px; padding:16px; background:var(--panel); }
+footer input { flex:1; padding:12px; border-radius:10px; border:1px solid #333; color:var(--text); background:#1a1d24; }
+footer button { padding:12px 16px; border-radius:10px; border:0; background:#4f6bed; color:white; cursor:pointer; }
+
+.sources { margin-top:8px; background:#141823; border:1px solid #2a2f3b; border-radius:10px; padding:10px; }
+.sources .title{font-weight:600;margin-bottom:6px;color:var(--muted);} .sources ul{margin:0;padding-left:16px;} .sources li{margin:4px 0;display:flex;gap:8px;align-items:center;} .sources .score{opacity:.6;font-size:.85em;}
+header .row{display:flex;gap:8px;align-items:center;} header button{padding:8px 10px;border-radius:8px;border:1px solid #2b2f3a;background:#19202d;color:white;cursor:pointer;}
+/* History drawer */
+.history-drawer {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: 360px;
+  background: #10141d;
+  border-left: 1px solid #2a2f3b;
+  transform: translateX(100%);
+  transition: transform .2s ease;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+}
+.history-drawer.open { transform: translateX(0); }
+
+.hd-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 12px;
+  background: #0e121a;
+  border-bottom: 1px solid #232937;
+}
+.hd-header .spacer { flex: 1; }
+.hd-header button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #2b2f3a;
+  background: #19202d;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
+.hd-body {
+  flex: 1;
+  overflow: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bubble.small { font-size: 0.95rem; padding: 10px 12px; }
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 50;
+}
+
+/* Tidy header buttons */
+header .row { display:flex; gap:8px; align-items:center; }
+header button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #2b2f3a;
+  background: #19202d;
+  color: #e8e8e8;
+  cursor: pointer;
+}
