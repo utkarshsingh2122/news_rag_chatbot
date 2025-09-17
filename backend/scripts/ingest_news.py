@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from tqdm import tqdm
 
 load_dotenv()
-JINA_API_KEY = os.getenv("JINA_API_KEY")
+JINA_API_KEY = "jina_4d820adf6268483fa43163160d72a8aeLFE4SDVXw2fFomgo-VPC8zE9d08I"
 JINA_EMBED_MODEL = os.getenv("JINA_EMBED_MODEL", "jina-embeddings-v3")
 QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
