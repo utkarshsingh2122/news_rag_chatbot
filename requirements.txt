@@ -1,6 +1,0 @@
-feedparser
-trafilatura
-requests
-qdrant-client
-python-dotenv
-tqdm

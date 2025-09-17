@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # RAG News Backend (Node + Express)
 
 An Express API that powers a Retrieval‑Augmented Generation chatbot over a small news corpus.
@@ -83,26 +82,3 @@ pnpm build && pnpm start
 - Add env vars (same as `.env`).
 - Expose the port in `PORT`.
 
-=======
-# RAG News Chatbot — Full Stack (Single-Command Dev)
-This repo contains a complete, runnable example of a RAG chatbot over ~50 news articles.
-
-## Quickstart
-```bash
-docker compose up -d qdrant redis
-
-# Ingest news into Qdrant
-cd backend
-python -m pip install -r requirements.txt
-python scripts/ingest_news.py
-
-# Start API
-npm install
-npm run dev
-
-# Frontend
-cd ../frontend
-npm install
-npm run dev
-```
->>>>>>> b1c47666638a6c3d5e42ecc4c6993f9f0b046ef2
