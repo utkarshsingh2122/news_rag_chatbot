@@ -19,3 +19,5 @@ cd ../frontend
 npm install
 npm run dev
 ```
+# Demo video link
+https://www.dropbox.com/scl/fi/j6nx1jnmqu80g7m1zzv7b/Screen-Recording-2025-09-17-032129.mp4?rlkey=o6fq6r2s39sqepbwzl2qvtk4k&st=icmosnoa&dl=0
